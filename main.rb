@@ -55,7 +55,7 @@ else
 end
 
 puts "Hoje é #{tipo_dia}"
-=end
+
 
 puts "Digite o dia da semana em inteiro: "
 dia_semana = gets.chomp.to_i
@@ -69,3 +69,32 @@ when 6, 7
 else
   puts "Valor inválido"
 end
+
+
+fruits = ['banana', 'laranja', 'melão', 'uva']
+
+for i in fruits
+  puts i
+end
+
+i = 0
+while i != 2
+  puts i
+  i += 1
+end
+
+
+count = 0
+loop do
+  puts "Opa!"
+  break if count == 2
+  count += 1
+end
+=end
+
+5.times do
+  puts "Opa!"
+end
+    
+
+
