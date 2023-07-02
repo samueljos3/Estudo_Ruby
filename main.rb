@@ -62,7 +62,7 @@ dia_semana = gets.chomp.to_i
 
 case dia_semana
 
-when 2..5
+when 1..5
   puts "Não é fim de semana!"
 when 6, 7
   puts "É fim de semana!"
