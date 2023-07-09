@@ -90,11 +90,117 @@ loop do
   break if count == 2
   count += 1
 end
-=end
 
 5.times do
   puts "Opa!"
 end
-    
 
+
+num_array = [1, 2, 3, 4, 5]
+puts num_array[1]
+
+str_array = ["A", "B", "C", "D", "E"]
+puts str_array[1]
+
+novo = Array.new()
+novo2 = Array.new(3)
+novo3 = Array.new(3, 7)
+novo4 = Array.new(2, true)
+
+print novo, "\n"
+print novo2, "\n"
+print novo3, "\n"
+print novo4, "\n"
+
+
+print str_array.first(3), "\n"
+print str_array.last(2), "\n"
+
+print str_array.push("F", "G"), "\n"
+#print str_array << "H"
+
+str_array.pop  # remove o último termo
+print str_array, "\n"
+
+str_array.unshift("Z") # adiciona um elemento no início
+print str_array, "\n"
+
+str_array.shift() # remove o primeiro elemento
+print str_array, "\n"
+
+str_array.shift(2) # removendo os dois primeiros
+str_array.pop(2)  # removendo os dois últimos
+print str_array, "\n"
+
+l1 = [1,2,3]
+l2 = [3,4,5]
+
+print l1 + l2, "\n"
+print l1.concat(l2), "\n"
+
+print l1 - l2, "\n"  
+l1 = [1,1,2,3,3,3,4]
+print l1 - l2, "\n"
+
+puts l1.empty? # verifica se está vazia
+puts l1.length # tamanho
+print l1.reverse, "\n" # reverte
+puts l1.include?(2) # verificando se está incluso
+puts l1.include?(7)
+puts l1.join # juntando os valores
+puts l1.join('*') # juntando os valores com *
+
+
+novo_hash = Hash.new # criando hash
+hash = {'nome' => 'Alfredo', 'idade' => 34} # criando hash
+puts (hash)
+
+puts hash['nome'] # acessando valor
+#puts hash['valor_NA'] # não existe e pode gerar problema
+#puts hash.fetch('valor_NA') # gera um erro quando não encontra o valor
+puts hash.fetch('valor_NA', 'Valor não encontrado!') # mostrará o valor depois da vírgula no lugar do error
+
+hash['cor_olho'] = 'azul' # adicionando novo elemento
+puts hash
+
+hash['cor_olho'] = 'castanho' # alterando o valor
+puts hash
+
+hash.delete('cor_olho') # removendo valor
+puts hash
+
+puts hash.keys, '********'
+puts hash.values
+
+hash2 = {'cachorro' => 'golden', 'tamanho' => 102, 'idade' => 5} # criando hash
+
+puts hash.merge(hash2) # juntando os dois hashs / a idade do segundo hash vai ficar no lugar do primeiro
+
+hash_symbol = {:marca => 'fiat', :modelo => 'uno'} # criando hash com symbol
+puts hash_symbol
+
+hash_symbol2 = {marca2: 'fiat', modelo2: 'uno'} # criando com symbols syntax (só funciona para symbols)
+puts hash_symbol2
+
+puts hash_symbol[:marca] # é preciso usar a sintaxe de símbolo
+puts hash_symbol2[:modelo2]
+
+
+def fala_nome(nome) 
+  puts "Olá, #{nome}!"
+end
+
+puts "Digite o seu nome:"
+name = gets.chomp
+fala_nome name
+
+def fala_nome2(nome2) 
+  return puts "Olá, #{nome2}!"  # return informa o final da execução e impede que continue
+  puts "Olá, #{nome2}!"  # isso não será executado
+end
+
+puts "Digite o seu nome:"
+name2 = gets.chomp
+fala_nome2 name2
+=end
 
