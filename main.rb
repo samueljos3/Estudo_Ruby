@@ -204,3 +204,26 @@ name2 = gets.chomp
 fala_nome2 name2
 =end
 
+cores = ['vermelho', 'azul', 'roxo', 'verde', 'preto', 'branco']
+cores_escolhidas = []
+
+for cor in cores do
+  if cor != 'verde'
+  cores_escolhidas.push(cor)
+  end
+end
+
+print cores_escolhidas, "\n"
+
+print cores.select{|cor| cor != 'verde'}, "\n" # outra forma 
+print cores.reject{|cor| cor == 'verde'}, "\n" # outra forma
+
+
+cores.each{|cor| puts "#{cor} escolhido"}
+
+cores = cores.each{|cor| cor.upcase} # isso não retorna tudo maiúsculo
+print cores, "\n"
+
+cores_m = cores.map{|cor| cor.upcase} # o comando map consegue retornar
+print cores_m, "\n"
+
